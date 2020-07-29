@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2B5F46B2-11F1-43A6-8211-563297BA5CC8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Prodavnica_racunara</RootNamespace>
+    <AssemblyName>Prodavnica_racunara</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Datoteke.cs" />
+    <Compile Include="Data\Moduli\ArtikalProdaje.cs" />
+    <Compile Include="Data\Moduli\GotovaKonfiguracija.cs" />
+    <Compile Include="Data\Moduli\KategorijaKomponente.cs" />
+    <Compile Include="Data\Moduli\KomponentaRacunara.cs" />
+    <Compile Include="Data\Moduli\Korisnik.cs" />
+    <Compile Include="Data\Moduli\MemorijaRacunara.cs" />
+    <Compile Include="Data\Moduli\Menadzer.cs" />
+    <Compile Include="Data\Moduli\ProcesorRacunara.cs" />
+    <Compile Include="Data\Moduli\Prodavac.cs" />
+    <Compile Include="Data\Moduli\RacunProdaje.cs" />
+    <Compile Include="Data\Moduli\StavkaRacuna.cs" />
+    <Compile Include="PomocneKlase\Meniji.cs" />
+    <Compile Include="PomocneKlase\SortArtCenaASC.cs" />
+    <Compile Include="PomocneKlase\SortArtCenaDESC.cs" />
+    <Compile Include="PomocneKlase\SortArtNazivASC.cs" />
+    <Compile Include="PomocneKlase\SortArtNazivDESC.cs" />
+    <Compile Include="PomocneKlase\SortirajArtikleSifra.cs" />
+    <Compile Include="PomocneKlase\SortirajKategorijeSifra.cs" />
+    <Compile Include="PomocneKlase\SortirajKomponenteNaziv.cs" />
+    <Compile Include="PomocneKlase\SortirajKomponenteSifra.cs" />
+    <Compile Include="PomocneKlase\SortirajKonfiguracijeSifra.cs" />
+    <Compile Include="PomocneKlase\SortirajKonfiguracijuKolicina.cs" />
+    <Compile Include="PomocneKlase\SortKompKat.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\ArtikalProdajeUI.cs" />
+    <Compile Include="UI\GotovaKonfiguracijaUI.cs" />
+    <Compile Include="UI\KategorijaKomponenteUI.cs" />
+    <Compile Include="UI\KomponentaRacunaraUI.cs" />
+    <Compile Include="UI\PregledUI.cs" />
+    <Compile Include="UI\PrijavaUI.cs" />
+    <Compile Include="UI\RacunUI.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Data\artikal-prodaje.csv" />
+    <None Include="Data\racuni.csv" />
+    <None Include="Data\kategorije.csv" />
+    <None Include="Data\korisnik.csv" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
